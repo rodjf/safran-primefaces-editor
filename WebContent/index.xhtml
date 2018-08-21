@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
+<html xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:p="http://primefaces.org/ui">
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+>
 
 <h:head>
-	<f:facet name="first">
-		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
-	</f:facet>
 </h:head>
 <h:body>
 	<h1>Hello World PrimeFaces</h1>
@@ -18,7 +16,7 @@
 	<h:link value="editeur" outcome="editor.xhtml" />
 
 	<h:form>
-		<p:editor id="editor" widgetVar="editorWidget" value="#{editorBean.value}" width="600"  />
+		<pe:ckEditor id="editor" widgetVar="editorWidget" value="#{editorBean.value}" width="600" />
 
 		<h:panelGrid columns="2" style="margin-top: 10px">
 			<p:commandButton value="Submit" update="display" onclick="dlg.show()" icon="ui-icon-disk" />
